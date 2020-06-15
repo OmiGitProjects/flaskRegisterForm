@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for blog in blogs %}
+<div class="jumbotron jumbotron-fluid py-2 bg-light mt-3 mb-2">
+        <div class="container">
+                <h3 class="text-secondary">{{ blog.title }}</h3>
+                <p class="lead">{{ blog.content }}</p><hr />
+                <p class="badge badge-danger">Posted by {{ blog.author }}</p> <small>{{ blog.timeStamp }}</small>
+        </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
